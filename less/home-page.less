@@ -1,9 +1,16 @@
 // Home Content
 
 .home {
-
+  @media @phone{
+    //border: green 4px solid;
+  }
   .intro {
-
+    .headimg{
+      img{
+        width: 100%;
+        .borderR(5px);
+      }
+    }
     h2 {
       padding: 15px;
     }
@@ -15,15 +22,34 @@
   }
 
   .space-images {
-    display: flex;
+    .displayflex(none, none);
     flex-wrap: wrap;
     width: 100%;
+    //phone variable
+    @media @phone{
+      flex-direction: column;
+      .blast{
+          width: 98%;
+          margin: 0 auto;
+         // border: red 4px solid;
+      }
+      .sky{
+          display: none;
+      }
+      .launch{
+          display: none;
+      }
+       //border: blue 4px solid;
+    }
 
     img {
       width: 28%;
       margin: 20px 2.5%;
-      border-radius: 20px;
+      .borderR(20px);
       height: 100%;
+      @media @phone{
+        width: 100%;
+      }
     }
   }
 
@@ -43,11 +69,23 @@
     margin-top: 60px;
     border-top: 1px solid @main-border-color;
     padding: 50px 60px;
-    display: flex;
-    justify-content: center;
+    .displayflex(center, none);
+    //border: blue 4px solid;
+
+    //phone variable
+    @media @phone{
+      flex-direction: column-reverse;
+    }
 
     .walk-text {
       width: 50%;
+
+      //phone variable
+      @media @phone{
+        width: 130%;
+        margin-left: -15%;
+        //border: red 4px solid;
+      }
 
       h3 {
         margin-bottom: 10px;
@@ -58,6 +96,19 @@
       }
 
       .btn {
+        .button{
+        .buttons(@btn-bg-color; white);
+
+        //phone variable
+        @media @phone{
+          display: block;
+          width:100%;
+        }
+        }
+        .button:hover{
+          color: @btn-bg-color;
+          background-color: white;
+        }
       }
     }
 
@@ -65,6 +116,13 @@
       width: 46%;
       margin-left: 4%;
       
+      //phone variable
+      @media @phone{
+        width: 130%;
+        margin-left: -15%;
+        //border: red 4px solid;
+
+      }
       img {
         width: 100%;
         height: auto;
@@ -72,4 +130,5 @@
       }
     }
   }
-}// home
+}
+// home
