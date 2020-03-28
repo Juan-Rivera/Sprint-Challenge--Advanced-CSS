@@ -1,1 +1,25 @@
 // Mixins Here
+.buttons (@backgroundcolor; @color){
+    background-color: @backgroundcolor;
+    color: @color;
+    font-size: 2em;
+    padding-left: 1em;
+    padding-right: 1em;
+    padding-top: .25em;
+    padding-bottom: .25em;
+    border-radius: 5px;
+        @media @phone{
+            padding-top: 1.5em;
+            padding-bottom: 1.5em;
+        }
+    }
+
+.displayflex(@justify, @align){
+    display: flex;
+    justify-content: @justify;
+    align-items: @align;
+}
+
+.borderR(@radius){
+    border-radius: @radius;
+}
